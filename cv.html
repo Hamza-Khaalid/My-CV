@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Khalid - Developer CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    }
+    function downloadPDF() {
+      window.print();
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print {
+        display: none;
+      }
+    }
+    .dark {
+        color: white;
+        background-color: black;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all">
+  <div class="max-w-4xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-6 no-print">
+      <button onclick="toggleDarkMode()" class="px-4 py-2 bg-blue-500 text-white rounded">Toggle Dark Mode</button>
+      <button onclick="downloadPDF()" class="px-4 py-2 bg-green-500 text-white rounded">Download PDF</button>
+    </div>
+
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold" style="text-decoration: underline;">Hamza Khalid</h1>
+      <p class="text-lg">Aspiring Full Stack Developer</p>
+
+      <br>
+      <p>Email: <a href="mailto:sahibzadahamzakhalid@gmail.com" class="text-blue-400">sahibzadahamzakhalid@gmail.com</a></p>
+      
+      <p>GitHub: <a href="https://github.com/Hamza-Khaalid" class="text-blue-400">github.com/Hamza-Khaalid</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/hamza-khalid-05b657297/" class="text-blue-400">linkedin.com/in/hamza-khalid</a></p>
+    </header>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Summary</h2>
+      <p>I’m a self-driven developer actively building full-stack projects while pursuing my Computer Science degree. I specialize in front-end technologies and love turning creative ideas into real-world products — from AI tools to eCommerce dashboards.</p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Education</h2>
+      <p><strong>University of Engineering and Technology, Mardan</strong></p>
+      <p>Bachelor in Computer Science (Expected 2027)</p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Skills</h2>
+      <ul class="list-disc ml-6">
+        <li>HTML, CSS, JavaScript (ES6+), Tailwind CSS</li>
+        <li>React (learning), Chart.js(intermediate), API integration</li>
+        <li>C, C++, Python, Git/GitHub</li>
+        <li>Responsive Web Design, UX/UI thinking</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Project Experience</h2>
+      <div class="space-y-4">
+        <div>
+          <strong>Linoir – Custom T-shirt eCommerce Web App</strong>
+          <p>Built a complete mock brand website with real features like product browsing, shirt customization, and cart UX. Focused on realism and modern aesthetics.</p>
+        </div>
+        <div>
+          <strong>PrimeDistro – A Distribution Company</strong>
+          <p>A website for a distribution company that works with different brands to distribute their products among the local market.</p>
+        </div>
+        <div>
+          <strong>PrimeDistro – Distribution Company Dashboard</strong>
+          <p>Developed a realistic dashboard UI using Tailwind and Chart.js for stock and category management. Practiced visual data representation with no backend.</p>
+        </div>
+        
+        <div>
+          <strong>Image Generator + Social Media Video Downloader</strong>
+          <p>Single-page apps using HuggingFace & 3rd-party APIs to demonstrate modern API integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Soft Skills</h2>
+      <ul class="list-disc ml-6">
+        <li>Self-starter & quick learner</li>
+        <li>Team collaboration & remote work friendly</li>
+        <li>Strong communication and curiosity to explore</li>
+      </ul>
+    </section>
+
+    <footer class="mt-10 border-t pt-4 text-sm text-gray-500 dark:text-gray-400" style="display: flex; justify-content: center; align-items: center;">
+      Made with ❤️ by Hamza Khalid 
+    </footer>
+  </div>
+</body>
+
+</html>
