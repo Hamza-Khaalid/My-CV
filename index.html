@@ -25,6 +25,7 @@
     .dark {
         color: white;
         background-color: black;
+        border-bottom: 2px solid white;
     }
   </style>
 </head>
@@ -40,16 +41,24 @@
   <div id="cv">
  
 
-    <header class="mb-8">
-      <h1 class="text-4xl font-bold" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Hamza Khalid</h1>
-      <p class="text-lg">Aspiring Full Stack Developer</p>
-
-      <br>
+    <header class="mb-8 flex items-center space-x-6" style="border-bottom: 2px solid #000; padding-bottom: 10px;">
+  <img src="hamza.jpg" alt="Hamza Khalid" width="130" class="  border-1 border-gray-300 dark:border-gray-700 object-cover" />
+  <div style=" display:flex; flex-direction: column; align-items: flex-start;">
+  <div>
+    <h1 class="text-4xl font-bold" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Hamza Khalid</h1>
+    <p class="text-lg">Aspiring Full Stack Developer</p>
+  </div>
+  <br>
+ <div class="handles" >
+   
       <p>Email: <a href="mailto:sahibzadahamzakhalid@gmail.com" class="text-blue-400">sahibzadahamzakhalid@gmail.com</a></p>
       
       <p>GitHub: <a href="https://github.com/Hamza-Khaalid" class="text-blue-400">github.com/Hamza-Khaalid</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/hamza-khalid-05b657297/" class="text-blue-400">linkedin.com/in/hamza-khalid</a></p>
-    </header>
+   </div>
+   </div>
+ </header>
+
 
     <section class="mb-6">
       <h2 class="text-2xl font-semibold mb-2" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Summary</h2>
@@ -110,12 +119,12 @@
       </ul>
     </section>
 
-    <footer class="mt-10 border-t pt-4 text-sm text-gray-500 dark:text-gray-400" style="display: flex; justify-content: center; align-items: center;">
-      Made with ❤️ by Hamza Khalid 
-    </footer>
+    
   </div>
 </div>
-  
+  <footer class="mt-10 border-t pt-4 text-sm text-gray-500 dark:text-gray-400" style="display: flex; justify-content: center; align-items: center;">
+      Made with ❤️ by Hamza Khalid 
+    </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
