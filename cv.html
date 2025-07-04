@@ -30,14 +30,18 @@
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all">
-  <div class="max-w-4xl mx-auto p-6">
+
+   <div class="max-w-4xl mx-auto p-6">
     <div class="flex justify-between items-center mb-6 no-print">
       <button onclick="toggleDarkMode()" class="px-4 py-2 bg-blue-500 text-white rounded">Toggle Dark Mode</button>
-      <button onclick="downloadPDF()" class="px-4 py-2 bg-blue-500 text-white rounded">Download PDF</button>
+      <button id="download-pdf" class="px-4 py-2 bg-blue-500 text-white rounded">Download PDF</button>
     </div>
 
+  <div id="cv">
+ 
+
     <header class="mb-8">
-      <h1 class="text-4xl font-bold" style="text-decoration: underline;">Hamza Khalid</h1>
+      <h1 class="text-4xl font-bold" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Hamza Khalid</h1>
       <p class="text-lg">Aspiring Full Stack Developer</p>
 
       <br>
@@ -48,19 +52,19 @@
     </header>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Summary</h2>
+      <h2 class="text-2xl font-semibold mb-2" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Summary</h2>
       <p>I’m a self-driven developer actively building full-stack projects while pursuing my Computer Science degree. I specialize in front-end technologies and love turning creative ideas into real-world products — from AI tools to eCommerce dashboards.</p>
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Education</h2>
+      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline; text-underline-offset: 2px">Education</h2>
       <p><strong>University of Engineering and Technology, Mardan</strong></p>
       <p>Bachelor in Computer Science (Expected 2027)</p>
       <p>Currently maintaining CGPA of 3.14</p>
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Skills</h2>
+      <h2 class="text-2xl font-semibold mb-2" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Skills</h2>
       <ul class="list-disc ml-6">
         <li>HTML, CSS, JavaScript (ES6+), Tailwind CSS</li>
         <li>React (learning), Chart.js(intermediate), API integration</li>
@@ -70,30 +74,35 @@
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Project Experience</h2>
+      <h2 class="text-2xl font-semibold mb-2" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Project Experience</h2>
       <div class="space-y-4">
         <div>
           <strong>Linoir – Custom T-shirt eCommerce Web App</strong>
           <p>Built a complete mock brand website with real features like product browsing, shirt customization, and cart UX. Focused on realism and modern aesthetics.</p>
+          <a href="https://www.linoir.shop/" style="color: blue; text-decoration: underline;">See Live</a>
         </div>
         <div>
           <strong>PrimeDistro – A Distribution Company</strong>
           <p>A website for a distribution company that works with different brands to distribute their products among the local market.</p>
+          <a href="https://hamza-khaalid.github.io/primeDistro/" style="color: blue; text-decoration: underline;">See Live</a>
         </div>
         <div>
           <strong>PrimeDistro – Distribution Company Dashboard</strong>
           <p>Developed a realistic dashboard UI using Tailwind and Chart.js for stock and category management. Practiced visual data representation with no backend.</p>
+          <a href="https://hamza-khaalid.github.io/primeDistroDashboard/" style="color: blue; text-decoration: underline;">See Live</a>
         </div>
         
         <div>
           <strong>Image Generator + Social Media Video Downloader</strong>
           <p>Single-page apps using HuggingFace & 3rd-party APIs to demonstrate modern API integration.</p>
+          <a href="https://hamza-khaalid.github.io/isham-image-generator/" style="color: blue; text-decoration: underline;">See Live (Image Generator)</a> <br>
+          <a href="https://socialmediadownloader.vercel.app/" style="color: blue; text-decoration: underline;">See Live (Social Media Video Downloader)</a>
         </div>
       </div>
     </section>
 
     <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2" style="text-decoration: underline;">Soft Skills</h2>
+      <h2 class="text-2xl font-semibold mb-2" style="border-bottom: 2px solid #000; padding-bottom: 4px; display: inline-block;">Soft Skills</h2>
       <ul class="list-disc ml-6">
         <li>Self-starter & quick learner</li>
         <li>Team collaboration & remote work friendly</li>
@@ -105,6 +114,27 @@
       Made with ❤️ by Hamza Khalid 
     </footer>
   </div>
+</div>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+  document.getElementById("download-pdf").addEventListener("click", function () {
+    const element = document.getElementById("cv"); // You can change this to a specific container like: document.getElementById("cv")
+
+    const opt = {
+      margin: 0.7,
+      filename: 'Hamza_Khalid_CV.pdf',
+      image: { type: 'jpeg', quality: 1, useCORS: true  },
+      html2canvas: { scale: 2},
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(element).save();
+  });
+</script>
+
 </body>
 
 </html>
